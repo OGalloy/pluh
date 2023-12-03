@@ -4,7 +4,7 @@ const connection_data = {
 	host: process.env.MYSQL_HOST,
 	user: process.env.MYSQL_USER_LOGIN,
 	database: process.env.MYSQL_DATABASE_NAME,
-	passsword: process.env.MYSQL_USER_PASS
+	password: process.env.MYSQL_USER_PASS
 }
 
 class Database {
@@ -13,7 +13,7 @@ class Database {
 		this.hostname = hostname;
 		this.password = password;
 		this.database_name = database_name;
-		this.connection = mysql.createconnection(connection_data);
+		this.connection = mysql.createConnection(connection_data);
 	}
 
 	close_connection() {
